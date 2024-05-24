@@ -1,8 +1,5 @@
-export interface AuthResponce{
-    status: string,
-    message: string, 
-    id?: string,
-    token?: string,
-    usname?: string,
-    ok: boolean
-}
+export interface AuthResponse {
+    message: string;
+    token?: string;
+  }
+  
