@@ -11,23 +11,12 @@ import {tap, map, catchError} from 'rxjs';
 })
 export class AuthService {
 
-  private baseUrl: string = environment.baseUrl;
-  private _user! : user;
-
-  get user(){
-    return{...this._user}
-  }
+  private baseUrl = 'http://localhost:3000'; // Ajusta la URL según tu configuración
 
   constructor(private http: HttpClient) { }
 
-  register(usname: string, pass: string, email:string){
-    const URL = `${this.baseUrl}/users/auth/new`;
-    const body = {usname, pass, email};
-
-  }
-
   login(username: string, password: string): Observable<string | undefined> {
-    const URL = `http://localhost:3000/auth/login`;
+    const URL = `${this.baseUrl}/auth/login`;
     const body = { username, password };
 
     return this.http.post<AuthResponse>(URL, body).pipe(
@@ -46,13 +35,8 @@ export class AuthService {
       })
     );
   }
-
-
-  validateToken(){
-    
-  }
-
+}
 
 
   
-}
+
