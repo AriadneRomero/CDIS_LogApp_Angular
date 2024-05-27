@@ -1,25 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {Routes, RouterModule,} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-
-
-const routes : Routes = [
+const routes: Routes = [
   {
     path: 'auth', 
-    loadChildren: ()=> import('./auth/auth.module').then(m => m.AuthModule)
-  }, 
-
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  },
   {
     path: 'dashboard', 
-    loadChildren: ()=> import('./protected-app/protected-app.module').then(m => m.ProtectedAppModule)
-  }, 
+    loadChildren: () => import('./protected-app/protected-app.module').then(m => m.ProtectedAppModule)
+  },
   {
     path: '**', 
     redirectTo: 'auth'
-  }, 
-
-]
+  }
+];
 
 @NgModule({
   declarations: [],

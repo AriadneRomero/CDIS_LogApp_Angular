@@ -8,6 +8,13 @@ import { Product } from '../../interfaces/product';
 })
 export class ListProductsComponent {
   listProducts: Product[] = [
-    { name: 'Coca Cola', description: 'Bebida con azucar', price: 50, stock: 200 }
+    { id:1, name: 'Coca Cola', description: 'Bebida con azucar', price: 50, stock: 200 },
+    { id:2, name: 'Corona', description: 'Bebida con alcohol', price: 5, stock: 300 },
   ]
+
+  constructor() {}
+
+  ngOnInit(): void {
+
+  }
 }

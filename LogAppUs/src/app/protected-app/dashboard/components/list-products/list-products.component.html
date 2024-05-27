@@ -1,5 +1,9 @@
 <div class="container">
-    <h4>Listado de Productos</h4>
+    <div class="title mb-4">
+        <h4>Listado de Productos</h4>
+        <button type="button" class="btn btn-secondary" routerLink="add">Agregar Producto</button>
+    </div>
+    
 
     <table class="table table-hover">
         <thead>
@@ -12,12 +16,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="table-active">
-            <td scope="row">Active</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
+          <tr *ngFor= "let item of listProducts"class="table-active">
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.price}}</td>
+            <td>{{ item.stock }}</td>
+            <td>
+                <button routerLink="edit/{{item.id}}" type="button" class="btn btn-info btn-sm">Edit</button>
+                <button type="button" class="btn btn-danger btn-sm ms-2">Delete</button>
+            </td>
           </tr>
         </tbody>
       </table>

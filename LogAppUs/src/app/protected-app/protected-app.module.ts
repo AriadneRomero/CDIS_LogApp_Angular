@@ -7,7 +7,6 @@ import { NavbarComponent } from './dashboard/components/navbar/navbar.component'
 import { ListProductsComponent } from './dashboard/components/list-products/list-products.component';
 import { AddEditProductComponent } from './dashboard/components/add-edit-product/add-edit-product.component';
 
-
 @NgModule({
   declarations: [
     DashboardComponent,
