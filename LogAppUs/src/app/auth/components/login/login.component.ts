@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthResponse } from '../../interfaces/res-interface';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
