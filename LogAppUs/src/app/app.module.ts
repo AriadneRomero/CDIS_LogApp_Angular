@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -18,8 +19,9 @@ import { ToastrModule } from 'ngx-toastr';
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,  // Asegúrate de incluir esto en los imports
-    ToastrModule.forRoot()  // Sintaxis correcta para configurar ToastrModule
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ProtectedAppRoutingModule } from './protected-app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -12,11 +13,12 @@ import { AddEditProductComponent } from './dashboard/components/add-edit-product
     DashboardComponent,
     NavbarComponent,
     ListProductsComponent,
-    AddEditProductComponent
+    AddEditProductComponent,
   ],
   imports: [
     CommonModule,
-    ProtectedAppRoutingModule
+    ProtectedAppRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class ProtectedAppModule { }
